@@ -1,0 +1,13 @@
+<html>
+
+
+<head>
+<head>
+   <title>JavaScript</title>
+   <script>
+       console.log("hi there")
+   </script>
+   <body>
+     Hi there
+   </body>
+</html>
