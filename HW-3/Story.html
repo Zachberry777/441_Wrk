@@ -1,0 +1,64 @@
+<html>
+
+  <style>
+
+     body{
+         background-color: silver;
+     }
+</style>
+<script>
+   function getChoice1()
+   {
+       var userChoice = document.getElementById("choice").value;
+       var userQuestion = document.getElementById("question");
+       if(userChoice === "Left")
+
+       {
+         userQuestion.innerHTML = "Left was a good way to go"
+       }
+    else if(userChoice ==="Right")
+
+    {
+        userQuestion.innerHTML = "Right was the Alien, You are dead. Next time take your time."
+
+    }
+else
+{
+
+  userQuestion.innerHTML = " Cant wait here all day. Must make a Choice."
+}
+
+   }
+
+</script>
+
+
+    <body>
+
+       <h1>The Hunt</h1>
+     <br>
+     <img src="Xeno.jpg" width="400" height="400"/>
+
+     <div id="question">
+     <br>
+     Its quiet and everybody is either dead or hiding in the Nostromo. Its been a week now since that creature has boarded our ship.
+     <br>
+     More then 70 people already dead or taken down to the 1st floor of the ship. The Nostromo is huge but yet I feel like its so tiny.
+     <br>
+     Every time I take a step out of hiding to move on I feel as the creature is still there, watching me. But I cant stay here any longer.
+     <br>
+     I must get across the station to call for help then take a life pod out of here. So here goes nothing.
+     <br>
+     I am heading down the first hall now, I must keep my eyes and ears ready. I made it down the hall and I must go left or right.
+     <br>
+     But on my left its so dark I wont be able to see anything. But on my right I heard screaming. Which way should I go?
+   </div>
+     <br>
+     <input type="text" id="choice" value="Type Left or Right">
+     <button id="buttonsubmit" onclick="getChoice1();">Press with Caution</button>
+
+
+    </body>
+
+
+</html>
