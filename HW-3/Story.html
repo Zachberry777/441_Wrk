@@ -14,11 +14,20 @@
        if(userChoice === "Left")
 
        {
-         userQuestion.innerHTML = "Left was a good way to go"
+         document.getElementById("choice").style.display="none";
+         document.getElementById("buttonsubmit").style.display="none";
+
+         document.getElementById("choice2").style.display="block";
+         document.getElementById("buttonsubmit2").style.display="block";
+
+
+         document.getElementById("mainImage").src = "ann.png"
+         userQuestion.innerHTML = "Left was a good way to go. Now I am heading down the dark hall way. I See a Andriod standing there. He seems to be functional, Should I ask for help?"
        }
     else if(userChoice ==="Right")
 
     {
+        document.getElementById("mainImage").src = "Xeno2.jpg"
         userQuestion.innerHTML = "Right was the Alien, You are dead. Next time take your time."
 
     }
@@ -30,6 +39,63 @@ else
 
    }
 
+   function getChoice2()
+   {
+       var droid = document.getElementById("choice2").value;
+       var userQuestion = document.getElementById("question");
+       if(droid === "Yes")
+       {
+
+         document.getElementById("choice2").style.display="none";
+         document.getElementById("buttonsubmit2").style.display="none";
+
+         document.getElementById("choice3").style.display="block";
+         document.getElementById("buttonsubmit3").style.display="block";
+
+
+
+
+
+document.getElementById("mainImage").src = "Xeno3.jpg"
+      userQuestion.innerHTML = "Thank God He is still good and not turned like the others. I asked him where I can go to call for help. He told me it was close by and needed to go through a couple more doors. I listened and made my way over. As I was almost there I saw the creature. He saw me and started to bolt at me. Should I run back or go straight to the door and lock it?"
+       }
+         else if(droid === "No")
+       {
+
+
+         document.getElementById("choice2").style.display="none";
+         document.getElementById("buttonsubmit2").style.display="none";
+
+         document.getElementById("choice3").style.display="block";
+         document.getElementById("buttonsubmit3").style.display="block";
+
+
+         document.getElementById("mainImage").src = "Xeno3.jpg"
+         userQuestion.innerHTML = "Im going to pass on this one and keep going, I think I can find this place on my own. Ill just go check out the Station map in this room next to me. Good! im close, I can make it in no time. As I was almost there I saw the creature. He saw me and started to bolt at me. Should I run back or go straight to the door and lock it?"
+
+       }
+   }
+    function getChoice3()
+
+
+    {
+      var call = document.getElementById("choice3").value;
+      var userQuestion = document.getElementById("question");
+      if(call === "Back")
+
+    {
+      document.getElementById("mainImage").src = "Xeno2.jpg"
+      userQuestion.innerHTML = "Turning back got you killed, Restart!"
+    }
+    else if(call === "Straight")
+    {document.getElementById("mainImage").src = "Room.jpg"
+      userQuestion.innerHTML = "I started to take off to the door, As the Alien leaped at me I slid under him. I managed to get to the door and lock it just in time. That was way to close. I saw the radio and called for help. They told me they would get here in about 10 hours. Then told me to get out in a pod and they would get me from there. The alien started to hit the door, I started to get nervous. Should I go through the vent or Hide in the locker?"
+    }
+    }
+
+
+
+
 </script>
 
 
@@ -37,7 +103,7 @@ else
 
        <h1>The Hunt</h1>
      <br>
-     <img src="Xeno.jpg" width="400" height="400"/>
+     <img src="Xeno.jpg" width="400" height="400" id="mainImage"/>
 
      <div id="question">
      <br>
@@ -56,6 +122,13 @@ else
      <br>
      <input type="text" id="choice" value="Type Left or Right">
      <button id="buttonsubmit" onclick="getChoice1();">Press with Caution</button>
+
+     <input type="text" id="choice2" value="Type Yes or No" style="display:none">
+     <button id="buttonsubmit2" onclick="getChoice2();" style="display:none">Press with Caution</button>
+
+     <input type="text" id="choice3" value="Type Back or straight" style="display:none">
+     <button id="buttonsubmit3" onclick="getChoice3();"style="display:none">Press with Caution</button>
+
 
 
     </body>
