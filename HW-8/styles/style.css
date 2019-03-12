@@ -1,0 +1,29 @@
+#square {
+   width: 100px;
+   height: 100px;
+   background: blue;
+   position: absolute;
+   left: 0;
+   top: 300;
+ }
+
+ #square2{
+   width: 70px;
+   height: 70px;
+   background: orange;
+   position: absolute;
+   left: 50;
+   top: 500;
+ }
+
+ .stuff{
+   background: orange;
+ }
+
+ #third{
+   background: grey;
+ }
+
+ body{
+     background-color: white;
+ }
