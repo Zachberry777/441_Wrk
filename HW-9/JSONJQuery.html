@@ -1,0 +1,40 @@
+<html>
+
+
+<head>
+   <script src="libs/jsonajax.js"></script>
+   <script>
+      let game = {
+      "manufacturer" : "Blizzard",
+      "model" : "Battlefield4",
+      "console" : {
+           "console1" : "PC",
+           "console2" : "XBOXONE",
+           "console3" : "PS4",
+       },
+         "price" : [
+         "60 new",
+         "52 used",
+         ]
+       }
+
+       $(function () {
+         $("button").click(function() {
+           showGameInfo();
+         });
+       });
+    function showGameInfo()
+    {
+      $("#gameInformation").html("manufacturer: " + game.manufacturer
+      + "<br>Model" + game.model + "<br>console:" + game.console.console1 + "<br>console2" + "<br>console3"
+      + game.console.console3 + "<br>prices available:<br>" +
+      game.prices[0] + "<br>" + game.prices[1] + "<br>");
+    }
+    </script>
+    </head>
+
+    <body>
+        <div id="gameInformation"></div>
+        <button id="btnSubmit" onclick="showGameInfo();">Show Information</button>
+        </body>
+        </html> 
