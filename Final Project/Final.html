@@ -1,0 +1,158 @@
+<html>
+
+  <style>
+
+     body{
+         background-color: gray;
+         }
+ </style>
+
+<body>
+
+   <h1>The Asylum</h1>
+
+<body>
+
+    <embed sr="Song/They_Can_Feel_You.mp3" autostart="true" loop="True"
+    width="2" height="0">
+    </embed>
+
+</body>
+
+ <br>
+ <img src="Images/Dustin.png" width="400" height="400" id="mainImage"/>
+
+ <div id="question">
+
+ <br>
+ Hello...HELLO! Is anyone there? My name is Dustin Walker. I..I woke up here and have no idea where I am. Please, anybody here!
+ <br>
+ I guess there's nobody here. Damn this place looks creepy as hell. what is this...An asylum? I should probably get up and look for a way out.
+ <br>
+ Looks like there's a gate close by, I'll go check it out. (walks over to gate.) Damn it's locked, how did I even get here?
+ <br>
+ I better find a different way out. I could go up to the doors in the Asylum, but they look like they are barricaded shut.
+ <br>
+ Which way should I go? I can go left and climb through the window, or I can go right to see what's around the corner.
+ <br>
+
+</div>
+
+ <br>
+ <input type="text" id="choice" value="Type Left or Right">
+ <button id="buttonsubmit" onclick="getChoice1();">Press with Caution</button>
+
+ <input type="text" id="choice2" value="Type Up or Down" style="display:none">
+ <button id="buttonsubmit2" onclick="getChoice2();" style="display:none">Press with Caution</button>
+
+ <input type="text" id="choice3" value="Type Back or straight" style="display:none">
+ <button id="buttonsubmit3" onclick="getChoice3();"style="display:none">Press with Caution</button>
+
+</body>
+
+
+<script>
+   function getChoice1()
+   {
+       var userChoice = document.getElementById("choice").value;
+       var userQuestion = document.getElementById("question");
+       if(userChoice === "Left")
+
+       {
+         document.getElementById("choice").style.display="none";
+         document.getElementById("buttonsubmit").style.display="none";
+
+         document.getElementById("choice2").style.display="block";
+         document.getElementById("buttonsubmit2").style.display="block";
+
+
+         document.getElementById("mainImage").src = "Images/Asylum.jpg"
+         userQuestion.innerHTML = "I think I will just go with Left, I have no idea what's around the corner if I go Right.(walks over to the left.) I need to climb up these beams to get in through the window. (climbing) Alright I made it in. I have to find a way through or at least look for why I ended up here. <br> I'll go through the door of this office room to see where I am. Looks like most of the lights are out in the hallway. Its kind of making this situation even more creepy.(heads down hallway) okay I can either head up the stairs or go down to the first floor of the building. "
+
+       }
+    else if(userChoice ==="Right")
+
+    {
+
+        document.getElementById("choice").style.display="none";
+        document.getElementById("buttonsubmit").style.display="none";
+
+        document.getElementById("choice2").style.display="block";
+        document.getElementById("buttonsubmit2").style.display="block";
+
+        document.getElementById("mainImage").src = "Images/Asylum.jpg"
+        userQuestion.innerHTML = "Going right was just a dead end, just a waste of my time. (heads over to the left) I need to climb up these beams to get in through the window. (climbing) Alright I made it in. I have to find a way through or at least look for why I ended up here. <br> I'll go through the door of this office room to see where I am. Looks like most of the lights are out in the hallway. It's kind of making this situation even more creepy.(heads down hallway) Okay, I can either head up the stairs or go down to the first floor of the building.  "
+
+    }
+else
+{
+
+  userQuestion.innerHTML = " Cant wait here all day. Must make a Choice."
+}
+
+   }
+
+   function getChoice2()
+   {
+       var droid = document.getElementById("choice2").value;
+       var userQuestion = document.getElementById("question");
+       if(droid === "Up")
+       {
+
+         document.getElementById("choice2").style.display="none";
+         document.getElementById("buttonsubmit2").style.display="none";
+
+         document.getElementById("choice3").style.display="block";
+         document.getElementById("buttonsubmit3").style.display="block";
+
+
+
+
+
+document.getElementById("mainImage").src = "Xeno3.jpg"
+      userQuestion.innerHTML = "Thank God He is still good and not turned like the others. I asked him where I can go to call for help. He told me it was close by and needed to go through a couple more doors. I listened and made my way over. As I was almost there I saw the creature. He saw me and started to bolt at me. Should I run back or go straight to the door and lock it?"
+       }
+         else if(droid === "Down")
+       {
+
+
+         document.getElementById("choice2").style.display="none";
+         document.getElementById("buttonsubmit2").style.display="none";
+
+         document.getElementById("choice3").style.display="block";
+         document.getElementById("buttonsubmit3").style.display="block";
+
+
+         document.getElementById("mainImage").src = "Xeno3.jpg"
+         userQuestion.innerHTML = "Im going to pass on this one and keep going, I think I can find this place on my own. Ill just go check out the Station map in this room next to me. Good! im close, I can make it in no time. As I was almost there I saw the creature. He saw me and started to bolt at me. Should I run back or go straight to the door and lock it?"
+
+       }
+   }
+    function getChoice3()
+
+
+    {
+      var call = document.getElementById("choice3").value;
+      var userQuestion = document.getElementById("question");
+      if(call === "Back")
+
+    {
+      document.getElementById("mainImage").src = "Xeno2.jpg"
+      userQuestion.innerHTML = "Turning back got you killed, Restart!"
+    }
+    else if(call === "Straight")
+    {document.getElementById("mainImage").src = "Room.jpg"
+      userQuestion.innerHTML = "I started to take off to the door, As the Alien leaped at me I slid under him. I managed to get to the door and lock it just in time. That was way to close. I saw the radio and called for help. They told me they would get here in about 10 hours. Then told me to get out in a pod and they would get me from there. The alien started to hit the door, I started to get nervous. Should I go through the vent or Hide in the locker?"
+    }
+    }
+
+
+
+
+</script>
+
+
+
+
+
+</html>
