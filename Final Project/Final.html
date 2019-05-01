@@ -9,11 +9,11 @@
 
 <body>
 
-   <h1>The Asylum</h1>
+   <h1>The Asylum: Two Endings</h1>
 
 <body>
 
-    <embed sr="Song/They_Can_Feel_You.mp3" autostart="true" loop="True"
+    <embed src="Song/Evening_of_Chaos.mp3" autostart="true" loop="True"
     width="2" height="0">
     </embed>
 
@@ -45,8 +45,31 @@
  <input type="text" id="choice2" value="Type Up or Down" style="display:none">
  <button id="buttonsubmit2" onclick="getChoice2();" style="display:none">Press with Caution</button>
 
- <input type="text" id="choice3" value="Type Back or straight" style="display:none">
+ <input type="text" id="choice3" value="Type Help or Hide" style="display:none">
  <button id="buttonsubmit3" onclick="getChoice3();"style="display:none">Press with Caution</button>
+
+ <input type="text" id="choice4" value="Type Fight or Run" style="display:none">
+ <button id="buttonsubmit4" onclick="getChoice4();"style="display:none">Press with Caution</button>
+
+ <input type="text" id="choice5" value="Type Back  or Bolt" style="display:none">
+ <button id="buttonsubmit5" onclick="getChoice5();"style="display:none">Press with Caution</button>
+
+ <input type="text" id="choice6" value="Type Talk or Sneak" style="display:none">
+ <button id="buttonsubmit6" onclick="getChoice6();"style="display:none">Press with Caution</button>
+
+ <input type="text" id="choice7" value="Type Fence  or Tree" style="display:none">
+ <button id="buttonsubmit7" onclick="getChoice7();"style="display:none">Press with Caution</button>
+
+ <input type="text" id="choice8" value="Type Run  or Fight " style="display:none">
+ <button id="buttonsubmit8" onclick="getChoice8();"style="display:none">Press with Caution</button>
+
+ <input type="text" id="choice9" value="Type Restart  or Restart" style="display:none">
+ <button id="buttonsubmit9" onclick="getChoice9();"style="display:none">Press with Caution</button>
+
+ <input type="text" id="choice10" value="Type Restart  or Restart" style="display:none">
+ <button id="buttonsubmit10" onclick="getChoice10();"style="display:none">Press with Caution</button>
+
+
 
 </body>
 
@@ -109,8 +132,8 @@ else
 
 
 
-document.getElementById("mainImage").src = "Xeno3.jpg"
-      userQuestion.innerHTML = "Thank God He is still good and not turned like the others. I asked him where I can go to call for help. He told me it was close by and needed to go through a couple more doors. I listened and made my way over. As I was almost there I saw the creature. He saw me and started to bolt at me. Should I run back or go straight to the door and lock it?"
+document.getElementById("mainImage").src = "Images/Hallway.jpg"
+      userQuestion.innerHTML = "Well I guess I'll head up stairs to see if I can find a way to the roof tops, to see if I can find a way out of here. (heading up the stairs) Okay lets see, i think im just going to walk down the hallway, but first I will turn on the light swtch *click. <br> Nothing happend....The lights won't turn on. (Foot Steps from a distance.) What is that I can here something. It looks like a person but I can't tell...he's walking towards me. Should i ask for help or should I run and hide? "
        }
          else if(droid === "Down")
        {
@@ -119,31 +142,187 @@ document.getElementById("mainImage").src = "Xeno3.jpg"
          document.getElementById("choice2").style.display="none";
          document.getElementById("buttonsubmit2").style.display="none";
 
-         document.getElementById("choice3").style.display="block";
-         document.getElementById("buttonsubmit3").style.display="block";
+         document.getElementById("choice4").style.display="block";
+         document.getElementById("buttonsubmit4").style.display="block";
 
 
-         document.getElementById("mainImage").src = "Xeno3.jpg"
-         userQuestion.innerHTML = "Im going to pass on this one and keep going, I think I can find this place on my own. Ill just go check out the Station map in this room next to me. Good! im close, I can make it in no time. As I was almost there I saw the creature. He saw me and started to bolt at me. Should I run back or go straight to the door and lock it?"
+         document.getElementById("mainImage").src = "Images/Down.png"
+         userQuestion.innerHTML = "I should probably head down stairs to see if anyone can help me out (heads down.) OH GOD!!.....A dead body..What the hell happend here. I really have to find a way out before I end up dead. (turns around) OH SHIT! there's a man with a weapon (Breathing Heavy.) Should I run or Fight? "
 
        }
    }
     function getChoice3()
 
-
     {
+
       var call = document.getElementById("choice3").value;
       var userQuestion = document.getElementById("question");
-      if(call === "Back")
+      if(call === "Help")
 
     {
-      document.getElementById("mainImage").src = "Xeno2.jpg"
-      userQuestion.innerHTML = "Turning back got you killed, Restart!"
+      document.getElementById("mainImage").src = "Images/Creep.jpg."
+      userQuestion.innerHTML = "Help me... I have no idea where I am can you help! (The man walks closer and takes out weapon) RAAAWWW! AHHHHHH! ****Game over****"
     }
-    else if(call === "Straight")
-    {document.getElementById("mainImage").src = "Room.jpg"
-      userQuestion.innerHTML = "I started to take off to the door, As the Alien leaped at me I slid under him. I managed to get to the door and lock it just in time. That was way to close. I saw the radio and called for help. They told me they would get here in about 10 hours. Then told me to get out in a pod and they would get me from there. The alien started to hit the door, I started to get nervous. Should I go through the vent or Hide in the locker?"
+    else if(call === "Hide")
+    {
+
+      document.getElementById("choice3").style.display="none";
+      document.getElementById("buttonsubmit3").style.display="none";
+
+      document.getElementById("choice5").style.display="block";
+      document.getElementById("buttonsubmit5").style.display="block";
+
+
+      document.getElementById("mainImage").src = "Images/Under.jpg"
+      userQuestion.innerHTML = "(Breathing heavy) Im going to hide, I dont think this man is friendly.(I start to run) OH GOD...He's chasing me... I have to hide under this bed!(Minutes pass by.) He's gone, I must move on. Im going to head to the back of the asylum to see if there is any way to go. <br> I hope there is nothing else here to kill me...That man almost didn't look human. His face was messed up and his body was horrable looking. Okay I see another window, Im going to go out now. (someone comes around corner.) What in God's name is that! Should I turn around or bolt passed him towards the window?  "
     }
+
+
+  }
+   function getChoice5()
+
+   {
+
+     var call = document.getElementById("choice5").value;
+     var userQuestion = document.getElementById("question");
+     if(call === "Back")
+
+   {
+     document.getElementById("mainImage").src = "Images/Big.jpg."
+     userQuestion.innerHTML = "He's to big...Im going to run back! Oh No...No...No HE'S TO FAST!! AHHHHHHHHH!****Game over****"
+   }
+   else if(call === "Bolt")
+   {
+
+     document.getElementById("choice5").style.display="none";
+     document.getElementById("buttonsubmit5").style.display="none";
+
+     document.getElementById("choice7").style.display="block";
+     document.getElementById("buttonsubmit7").style.display="block";
+
+
+     document.getElementById("mainImage").src = "Images/Out.jpg"
+     userQuestion.innerHTML = " Im going to Bolt for it (runs for window) I have to slide past him! (Jumps through window). UHH! That was a hard landing. I better keep running he's still close by. I Think I see a way out through the hole in the fence. (RAAWW) OH CRAP he's right behind me and he's ganing speed on me, Should I run for the fence or take cover behind the tree? "
+   }
+
+ }
+  function getChoice7()
+
+  {
+
+    var call = document.getElementById("choice7").value;
+    var userQuestion = document.getElementById("question");
+    if(call === "Tree")
+
+  {
+    document.getElementById("mainImage").src = "Images/Big.jpg."
+    userQuestion.innerHTML = "I'm going to hide behind the tree, I...I don't think he saw me....RRAWWW....AHHHHHHH!****Game over****"
+  }
+  else if(call === "Fence")
+  {
+
+    document.getElementById("choice7").style.display="none";
+    document.getElementById("buttonsubmit7").style.display="none";
+
+    document.getElementById("choice9").style.display="block";
+    document.getElementById("buttonsubmit9").style.display="block";
+
+
+    document.getElementById("mainImage").src = "Images/Free.jpg"
+    userQuestion.innerHTML = " I'm going to go for it...I think I can make it in time (Running). He's right on me....I HAVE TO GO FASTER!!! Image it through and I see a car!! I MADE IT!! (starts car and leaves) I can't believe I made it, but I still don't know how I ended up in that hell hole. Whatever I'll just go home and leave the counrty and start a new life off the grid. ***THE END*** RESTART to get a diffrent result. "
+  }
+}
+ function getChoice4()
+
+ {
+
+   var call = document.getElementById("choice4").value;
+   var userQuestion = document.getElementById("question");
+   if(call === "Fight")
+
+ {
+   document.getElementById("mainImage").src = "Images/Creep2.jpg."
+   userQuestion.innerHTML = "Come on lets fight! You think you can just.....AHHHHHHH!****Game over****"
+ }
+ else if(call === "Run")
+ {
+
+   document.getElementById("choice4").style.display="none";
+   document.getElementById("buttonsubmit4").style.display="none";
+
+   document.getElementById("choice6").style.display="block";
+   document.getElementById("buttonsubmit6").style.display="block";
+
+
+   document.getElementById("mainImage").src = "Images/Sewer.jpg"
+   userQuestion.innerHTML = " Im going to run for it, But he's after me i better hide. (hides in locker for couple minutes). Okay I lost him. I better keep going to find my way out. I found some more stairs that lead down. Maybe I can find a way out through the sewers. (walking through sewer for awhile.) I've been done here for about an hour and still can't find my way out.(splash!) SHIT! what was that. Is that a guy? It doesn't look like the same guy. He looks like he could be someone to talk to or should I just sneak past him? "
+ }
+
+}
+
+function getChoice6()
+{
+    var droid = document.getElementById("choice6").value;
+    var userQuestion = document.getElementById("question");
+    if(droid === "Sneak")
+    {
+
+      document.getElementById("choice6").style.display="none";
+      document.getElementById("buttonsubmit6").style.display="none";
+
+      document.getElementById("choice8").style.display="block";
+      document.getElementById("buttonsubmit8").style.display="block";
+
+
+
+
+
+document.getElementById("mainImage").src = "Images/Man.jpg"
+   userQuestion.innerHTML = "I'm going to try to sneak past him, well here goes nothing. (sneaking past) KKKKK (Grabs me). AHHH LET ME GO! Who are you!<br> Don't worry about who I am. <br> You can talk? <br> Yes, I am a scientist around here.<br> So do you know why I am here? <br> Yes...You are here because I am using you as a rat for my next experiment.<br> WHAT! why me. <br> I've been keeping tabes on people who i feel fit strong enough to survive my Project. <br> What Experiment? <br> I will be using you to make something special out of you. You see i have always wanted to make something better out of people and i finally have things to mutate people into something better and diffrent. So far nothing has worked out but hopfully through trail and error you will be the Next step to create something better. <br> You are sick!! What wrong with you! should I Run or Fight him? "
+    }
+      else if(droid === "Talk")
+    {
+
+
+      document.getElementById("choice6").style.display="none";
+      document.getElementById("buttonsubmit6").style.display="none";
+
+      document.getElementById("choice8").style.display="block";
+      document.getElementById("buttonsubmit8").style.display="block";
+
+
+      document.getElementById("mainImage").src = "Images/Man.jpg"
+      userQuestion.innerHTML = " Hey, Who are you! Don't worry about who I am. <br> You can talk? <br> Yes, I am a scientist around here.<br> So do you know why I am here? <br> Yes...You are here because I am using you as a rat for my next experiment.<br> WHAT! why me. <br> I've been keeping tabes on people who i feel fit strong enough to survive my Project. <br> What Experiment? <br> I will be using you to make something special out of you. You see i have always wanted to make something better out of people and i finally have things to mutate people into something better and diffrent. So far nothing has worked out but hopfully through trail and error you will be the Next step to create something better. <br> You are sick!! What wrong with you! should I Run or Fight him? "
+
+    }
+
+  }
+   function getChoice8()
+
+   {
+
+     var call = document.getElementById("choice8").value;
+     var userQuestion = document.getElementById("question");
+     if(call === "Run")
+
+   {
+     document.getElementById("mainImage").src = "Images/End.jpg."
+     userQuestion.innerHTML = "Im going to run for it! (Stabbed in back) AHHHHHHHHH! You are the next experiment! ****Game over****"
+   }
+   else if(call === "Fight")
+   {
+
+     document.getElementById("choice8").style.display="none";
+     document.getElementById("buttonsubmit8").style.display="none";
+
+     document.getElementById("choice10").style.display="block";
+     document.getElementById("buttonsubmit10").style.display="block";
+
+
+     document.getElementById("mainImage").src = "Images/Free.jpg"
+     userQuestion.innerHTML = " That's it im tired of running lets fight! (Fighting) I will make it out of here you sick bastard! (Kills Scientist) I can't belive he was stalking me. I better get out of here, I think i finally see a way out up the ladder. A JEEP! I can leave! (gets in jeep) I can't believe I made it out. I got to go tell someone about this. ****The End*** RESTART to get diffrent ending.  "
+   }
+
     }
 
 
